@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.block-up {
+  padding-top: 50px;
+}
+
+.miner-wrapper {
+  margin: 0 auto;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border: 1px solid black;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.miner-wrapper .wrapper {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+.miner-wrapper .wrapper .miner__item {
+  height: 80px;
+  width: 80px;
+  background-color: green;
+  cursor: pointer;
+}
