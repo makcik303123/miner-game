@@ -1,44 +1,48 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .block-up {
-    padding-top: 20px;
-}
-
-.miner-open-card {
-    background-color: green;
-}
-
-.miner-dead {
-    background-color: red;
+  padding-top: 50px;
 }
 
 .miner-wrapper {
-    margin: 0 auto;
-    width: fit-content;
-    height: fit-content;
-    border: 1px solid black;
-    padding: 10px;
+  margin: 0 auto;
+  width: fit-content;
+  height: fit-content;
+  border: 1px solid black;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  .wrapper {
     display: flex;
-    flex-direction: column;
     gap: 10px;
-    .wrapper {
-        display: flex;
-        gap: 10px;
-        justify-content: center;
-        .miner__item {
-            height: 80px;
-            width: 80px;
+    justify-content: center;
+    .miner__item {
+      height: 80px;
+      width: 80px;
+      pointer-events: none;
+      cursor: pointer;
+      box-shadow: 2px 2px 5px black;
 
-            cursor: pointer;
-            box-shadow: 2px 2px 5px black;
-        }
+      &.playble {
+        pointer-events: all;
+      }
     }
+  }
+}
+
+.miner-open-card {
+  background-color: green;
+}
+
+.miner-dead {
+  background-color: red;
 }
 
 .miner-default {
-    background-color: rgb(160, 160, 0);
+  background-color: rgb(160, 160, 0);
 }

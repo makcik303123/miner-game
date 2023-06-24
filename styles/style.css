@@ -5,15 +5,7 @@
 }
 
 .block-up {
-  padding-top: 20px;
-}
-
-.miner-open-card {
-  background-color: green;
-}
-
-.miner-dead {
-  background-color: red;
+  padding-top: 50px;
 }
 
 .miner-wrapper {
@@ -36,10 +28,22 @@
 .miner-wrapper .wrapper .miner__item {
   height: 80px;
   width: 80px;
+  pointer-events: none;
   cursor: pointer;
   box-shadow: 2px 2px 5px black;
+}
+.miner-wrapper .wrapper .miner__item.playble {
+  pointer-events: all;
+}
+
+.miner-open-card {
+  background-color: green;
+}
+
+.miner-dead {
+  background-color: red;
 }
 
 .miner-default {
   background-color: rgb(160, 160, 0);
-}
+}/*# sourceMappingURL=style.css.map */
