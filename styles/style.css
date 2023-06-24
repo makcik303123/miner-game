@@ -30,4 +30,8 @@
   width: 80px;
   background-color: green;
   cursor: pointer;
+  pointer-events: none;
 }
+.miner-wrapper .wrapper .miner__item.active {
+  pointer-events: all;
+}/*# sourceMappingURL=style.css.map */
