@@ -5,7 +5,15 @@
 }
 
 .block-up {
-  padding-top: 50px;
+  padding-top: 20px;
+}
+
+.miner-open-card {
+  background-color: green;
+}
+
+.miner-dead {
+  background-color: red;
 }
 
 .miner-wrapper {
@@ -15,19 +23,23 @@
   height: -moz-fit-content;
   height: fit-content;
   border: 1px solid black;
-  padding: 5px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 10px;
 }
 .miner-wrapper .wrapper {
   display: flex;
-  gap: 5px;
+  gap: 10px;
   justify-content: center;
 }
 .miner-wrapper .wrapper .miner__item {
   height: 80px;
   width: 80px;
-  background-color: green;
   cursor: pointer;
+  box-shadow: 2px 2px 5px black;
+}
+
+.miner-default {
+  background-color: rgb(160, 160, 0);
 }
