@@ -4,9 +4,15 @@ const btnStart = document.querySelector("#start");
 
 let start = false;
 let temp = 0;
-
-for (let i = 0; i < fields.length; i++) {
-  fields[i].id = i;
+console.log(rows);
+for (let i = 0; i < rows.length; i++) {
+  console.log(rows[i]);
+  const index = rows[i].querySelectorAll(".miner__item");
+  for (let j = 0; j < rows[0].length; j++) {
+    console.log(index);
+    index[j].id = i + j;
+    rows[i].querySelectorAll(".miner__item")[j].id = i + j;
+  }
 }
 
 btnStart.addEventListener("click", () => {
@@ -18,14 +24,12 @@ function unlockNextRow(temp) {
   console.log("нажали кнопку");
 
   fields.forEach((field) => {
-    field.classList.remove("active");
+    field.classList.remove("playble");
   });
-
   rows[temp].querySelectorAll(".miner__item").forEach((field) => {
-    field.classList.add("active");
+    field.classList.add("playble");
     field.addEventListener("click", () => {
       console.log(field.id);
-      field.disabled = false;
       temp !== 9 ? unlockNextRow(temp + 1) : console.log("Game Over");
     });
     console.log(field);
