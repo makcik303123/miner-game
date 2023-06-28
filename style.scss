@@ -3,9 +3,24 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+body {
+  background: #2e4869;
+}
 .block-up {
   padding-top: 50px;
+  padding-bottom: 50px;
+
+  .panel {
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid rgb(122, 135, 122);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: fit-content;
+    background: #06264d;
+    color: aliceblue;
+  }
 }
 
 .miner-wrapper {
@@ -22,6 +37,9 @@
     gap: 10px;
     justify-content: center;
     .miner__item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       height: 80px;
       width: 80px;
       pointer-events: none;
@@ -31,16 +49,17 @@
       &.playble {
         pointer-events: all;
       }
+      &.miner-open-card {
+        background-color: green;
+      }
+      &.miner-dead {
+        background-color: red;
+      }
+      .miner__bomb {
+        width: 80%;
+      }
     }
   }
-}
-
-.miner-open-card {
-  background-color: green;
-}
-
-.miner-dead {
-  background-color: red;
 }
 
 .miner-default {

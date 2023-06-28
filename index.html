@@ -8,13 +8,35 @@
   </head>
   <body>
     <div class="block-up">
-      <button id="start">Start</button>
+      <div class="panel">
+        <span>Balance:</span>
+        <div>
+          <span class="panel__balance">100</span>
+          <span>$</span>
+        </div>
+        <div class="panel__countMoney">
+          <input class="countMoney__input" value="0.00" type="number" />
+          <span>$</span>
+          <button class="countMoney__btn" value="1">1$</button>
+          <button class="countMoney__btn" value="5">5$</button>
+          <button class="countMoney__btn" value="10">10$</button>
+          <button class="countMoney__btn" value="25">25$</button>
+        </div>
+        <div class="panel__multiplier">
+          <input class="multiplier__btn" value="X 1.36" type="button" />
+          <input class="multiplier__btn" value="X 1.85" type="button" />
+          <input class="multiplier__btn" value="X 2.51" type="button" />
+          <input class="multiplier__btn" value="X 3.42" type="button" />
+        </div>
+        <div class="panel__control">
+          <button id="start">Start</button>
+          <button disabled id="finish">Take money</button>
+        </div>
+      </div>
     </div>
     <div class="miner-wrapper">
       <div class="wrapper">
-        <div class="miner__item miner-default">
-          <img src="bomb-svgrepo-com.svg" alt="bomb" />
-        </div>
+        <div class="miner__item miner-default"></div>
         <div class="miner__item miner-default"></div>
         <div class="miner__item miner-default"></div>
         <div class="miner__item miner-default"></div>
@@ -93,7 +115,6 @@
         <div class="miner__item miner-default"></div>
       </div>
     </div>
-    <script src="./index.js"></script>
   </body>
-  <script src="/app.js"></script>
+  <script type="module" src="index.js"></script>
 </html>
