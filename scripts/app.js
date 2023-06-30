@@ -55,6 +55,13 @@ for (let i = 0; i < rows.length; i++) {
 
   for (let j = 0; j < index.length; j++) {
     index[j].id = `${i}${j}`;
+    const logo = document.createElement("img");
+    logo.src = "./img/logo.png";
+
+    document
+      .getElementById(index[j].id)
+      .appendChild(logo)
+      .classList.add("miner__logo");
   }
 }
 
@@ -147,8 +154,11 @@ function showFields(arrayBombs, arrayId, clickId) {
 
 function addBomb(id) {
   const image = document.createElement("img");
-  image.src = "bomb-svgrepo-com.svg";
+  const light = document.createElement("img");
+  image.src = "./img/mine.png";
+  light.src = "./img/mine-light.svg";
   document.getElementById(id).appendChild(image).classList.add("miner__bomb");
+  document.getElementById(id).appendChild(light).classList.add("miner__light");
 }
 
 btnFinish.addEventListener("click", takeMoney);
@@ -165,11 +175,18 @@ function takeMoney() {
 
 function gameOver() {
   fields.forEach((field) => {
-    if (field.firstChild) {
+    while (field.firstChild) {
       field.removeChild(field.firstChild);
     }
     field.classList.remove("miner-open-card");
     field.classList.remove("miner-dead");
     field.classList.remove("playble");
+    const logo = document.createElement("img");
+    logo.src = "./img/logo.png";
+
+    document
+      .getElementById(field.id)
+      .appendChild(logo)
+      .classList.add("miner__logo");
   });
 }
