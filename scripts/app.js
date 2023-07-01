@@ -18,7 +18,7 @@ let loseGame = false;
 function addBetter() {
   bet = input.value + "$";
   balance.innerHTML = `${
-    (Math.round(balance.innerHTML - bet.slice(0, -1)) * 100) / 100
+    Math.round((balance.innerHTML - bet.slice(0, -1)) * 100) / 100
   } `;
   input.disabled = true;
   moneyBtn.forEach((btn) => (btn.disabled = true));
@@ -164,6 +164,7 @@ function addBomb(id) {
 btnFinish.addEventListener("click", takeMoney);
 
 function takeMoney() {
+  post();
   balance.innerHTML = Math.round((+balance.innerHTML + win) * 100) / 100;
   btnFinish.innerHTML = "Take money";
   btnStart.disabled = false;
@@ -171,6 +172,15 @@ function takeMoney() {
   input.disabled = false;
   moneyBtn.forEach((btn) => (btn.disabled = false));
   multiplierBtn.forEach((btn) => (btn.disabled = false));
+  fields.forEach((field) => {
+    field.classList.remove("playble");
+  });
+}
+
+function post() {
+  console.log(input.value);
+  console.log("x" + Math.round((win / input.value) * 100) / 100);
+  console.log(win);
 }
 
 function gameOver() {
