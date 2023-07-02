@@ -24,6 +24,30 @@ body {
   background-color: #242c54;
   color: aliceblue;
 }
+.block-up .panel .panel__control {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+.block-up .panel .panel__control .control__start {
+  background-color: #59689a;
+  border-radius: 10px;
+  border: 1px solid rgb(116, 94, 187);
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  padding: 13px 25px;
+  cursor: pointer;
+}
+.block-up .panel .panel__control .control__finish {
+  background-color: #59689a;
+  border-radius: 10px;
+  border: 1px solid rgb(116, 94, 187);
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  padding: 13px;
+  flex: 1;
+  cursor: pointer;
+}
 
 .miner-wrapper {
   margin: 0 auto;
@@ -77,8 +101,8 @@ body {
   width: 80%;
 }
 .miner-wrapper .wrapper .miner__item .miner__light {
-  width: 80px;
-  height: 80px;
+  width: 130px;
+  height: 130px;
   position: absolute;
 }
 .miner-wrapper .wrapper .miner__item .miner__logo {
