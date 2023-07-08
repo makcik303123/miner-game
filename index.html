@@ -7,115 +7,206 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="block-up">
-      <div class="panel">
-        <span>Balance:</span>
-        <div>
-          <span class="panel__balance">100</span>
-          <span>$</span>
+    <div class="wrapper1">
+      <div id="login" class="login">
+        <div class="login_form_container">
+          <div class="login__close">
+            <span></span>
+            <span></span>
+          </div>
+          <div class="login_form">
+            <h2>Login</h2>
+            <div class="input_group">
+              <i class="fa fa-user"></i>
+              <input
+                type="text"
+                placeholder="Username"
+                class="input_text"
+                autocomplete="off"
+              />
+            </div>
+            <div class="input_group">
+              <i class="fa fa-unlock-alt"></i>
+              <input
+                type="password"
+                placeholder="Password"
+                class="input_text"
+                autocomplete="off"
+              />
+            </div>
+            <div class="button_group" id="login_button">
+              <button type="submit">Submit</button>
+            </div>
+            <div class="fotter">
+              <a>Forgot Password ?</a>
+              <a id="btn__SingUp">SingUp</a>
+            </div>
+          </div>
         </div>
-        <div class="panel__countMoney">
-          <input class="countMoney__input" value="0.00" type="number" />
-          <span>$</span>
-          <button class="countMoney__btn" value="1">1$</button>
-          <button class="countMoney__btn" value="5">5$</button>
-          <button class="countMoney__btn" value="10">10$</button>
-          <button class="countMoney__btn" value="25">25$</button>
+      </div>
+      <div id="signup" class="login">
+        <div class="login_form_container">
+          <div class="login__close">
+            <span></span>
+            <span></span>
+          </div>
+          <form class="login_form">
+            <h2>Sign up</h2>
+            <div class="input_group">
+              <i class="fa fa-user"></i>
+              <input
+                id="inputSignUpUsername"
+                type="text"
+                placeholder="Username"
+                class="input_text"
+                autocomplete="off"
+              />
+            </div>
+            <div class="input_group">
+              <i class="fa fa-unlock-alt"></i>
+              <input
+                id="inputSignUpPassword"
+                type="password"
+                placeholder="Password"
+                class="input_text"
+                autocomplete="off"
+              />
+            </div>
+            <div class="input_group">
+              <i class="fa fa-unlock-alt"></i>
+              <input
+                type="password"
+                placeholder="Confirm Password"
+                class="input_text"
+                autocomplete="off"
+              />
+            </div>
+            <div class="button_group" id="login_button">
+              <button id="submitSignUp" type="submit">Create Account</button>
+            </div>
+          </form>
         </div>
-        <div class="panel__multiplier">
-          <input class="multiplier__btn" value="X 1.36" type="button" />
-          <input class="multiplier__btn" value="X 1.85" type="button" />
-          <input class="multiplier__btn" value="X 2.51" type="button" />
-          <input class="multiplier__btn" value="X 3.42" type="button" />
+      </div>
+      <header class="header">
+        <img width="150" src="/img/bet-logo-1.svg" alt="" />
+        <button id="btnAutorization" class="header__button">
+          <img width="20" src="/img/lock-svgrepo-com.svg" alt="" />
+          <span class="button__text">Autorization</span>
+        </button>
+      </header>
+      <main class="main">
+        <div class="block-up">
+          <div class="panel">
+            <span>Balance:</span>
+            <div>
+              <span class="panel__balance">100</span>
+              <span>$</span>
+            </div>
+            <div class="panel__countMoney">
+              <input class="countMoney__input" value="0.00" type="number" />
+              <span>$</span>
+              <button class="countMoney__btn" value="1">1$</button>
+              <button class="countMoney__btn" value="5">5$</button>
+              <button class="countMoney__btn" value="10">10$</button>
+              <button class="countMoney__btn" value="25">25$</button>
+            </div>
+            <div class="panel__multiplier">
+              <input class="multiplier__btn" value="X 1.36" type="button" />
+              <input class="multiplier__btn" value="X 1.85" type="button" />
+              <input class="multiplier__btn" value="X 2.51" type="button" />
+              <input class="multiplier__btn" value="X 3.42" type="button" />
+            </div>
+            <div class="panel__control">
+              <button class="control__start" id="start">Start</button>
+              <button class="control__finish" disabled id="finish">
+                Take money
+              </button>
+            </div>
+          </div>
         </div>
-        <div class="panel__control">
-          <button class="control__start" id="start">Start</button>
-          <button class="control__finish" disabled id="finish">
-            Take money
-          </button>
+        <div class="miner-wrapper">
+          <div class="wrapper">
+            <div class="miner__item miner-default"></div>
+            <div class="miner__item miner-default"></div>
+            <div class="miner__item miner-default"></div>
+            <div class="miner__item miner-default"></div>
+            <div class="miner__item miner-default"></div>
+          </div>
+
+          <div class="wrapper">
+            <div class="miner__item miner-default"></div>
+            <div class="miner__item miner-default"></div>
+            <div class="miner__item miner-default"></div>
+            <div class="miner__item miner-default"></div>
+            <div class="miner__item miner-default"></div>
+          </div>
+
+          <div class="wrapper">
+            <div class="miner__item miner-default"></div>
+            <div class="miner__item miner-default"></div>
+            <div class="miner__item miner-default"></div>
+            <div class="miner__item miner-default"></div>
+            <div class="miner__item miner-default"></div>
+          </div>
+
+          <div class="wrapper">
+            <div class="miner__item miner-default"></div>
+            <div class="miner__item miner-default"></div>
+            <div class="miner__item miner-default"></div>
+            <div class="miner__item miner-default"></div>
+            <div class="miner__item miner-default"></div>
+          </div>
+
+          <div class="wrapper">
+            <div class="miner__item miner-default"></div>
+            <div class="miner__item miner-default"></div>
+            <div class="miner__item miner-default"></div>
+            <div class="miner__item miner-default"></div>
+            <div class="miner__item miner-default"></div>
+          </div>
+
+          <div class="wrapper">
+            <div class="miner__item miner-default"></div>
+            <div class="miner__item miner-default"></div>
+            <div class="miner__item miner-default"></div>
+            <div class="miner__item miner-default"></div>
+            <div class="miner__item miner-default"></div>
+          </div>
+
+          <div class="wrapper">
+            <div class="miner__item miner-default"></div>
+            <div class="miner__item miner-default"></div>
+            <div class="miner__item miner-default"></div>
+            <div class="miner__item miner-default"></div>
+            <div class="miner__item miner-default"></div>
+          </div>
+
+          <div class="wrapper">
+            <div class="miner__item miner-default"></div>
+            <div class="miner__item miner-default"></div>
+            <div class="miner__item miner-default"></div>
+            <div class="miner__item miner-default"></div>
+            <div class="miner__item miner-default"></div>
+          </div>
+
+          <div class="wrapper">
+            <div class="miner__item miner-default"></div>
+            <div class="miner__item miner-default"></div>
+            <div class="miner__item miner-default"></div>
+            <div class="miner__item miner-default"></div>
+            <div class="miner__item miner-default"></div>
+          </div>
+
+          <div class="wrapper">
+            <div class="miner__item miner-default"></div>
+            <div class="miner__item miner-default"></div>
+            <div class="miner__item miner-default"></div>
+            <div class="miner__item miner-default"></div>
+            <div class="miner__item miner-default"></div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="miner-wrapper">
-      <div class="wrapper">
-        <div class="miner__item miner-default"></div>
-        <div class="miner__item miner-default"></div>
-        <div class="miner__item miner-default"></div>
-        <div class="miner__item miner-default"></div>
-        <div class="miner__item miner-default"></div>
-      </div>
-
-      <div class="wrapper">
-        <div class="miner__item miner-default"></div>
-        <div class="miner__item miner-default"></div>
-        <div class="miner__item miner-default"></div>
-        <div class="miner__item miner-default"></div>
-        <div class="miner__item miner-default"></div>
-      </div>
-
-      <div class="wrapper">
-        <div class="miner__item miner-default"></div>
-        <div class="miner__item miner-default"></div>
-        <div class="miner__item miner-default"></div>
-        <div class="miner__item miner-default"></div>
-        <div class="miner__item miner-default"></div>
-      </div>
-
-      <div class="wrapper">
-        <div class="miner__item miner-default"></div>
-        <div class="miner__item miner-default"></div>
-        <div class="miner__item miner-default"></div>
-        <div class="miner__item miner-default"></div>
-        <div class="miner__item miner-default"></div>
-      </div>
-
-      <div class="wrapper">
-        <div class="miner__item miner-default"></div>
-        <div class="miner__item miner-default"></div>
-        <div class="miner__item miner-default"></div>
-        <div class="miner__item miner-default"></div>
-        <div class="miner__item miner-default"></div>
-      </div>
-
-      <div class="wrapper">
-        <div class="miner__item miner-default"></div>
-        <div class="miner__item miner-default"></div>
-        <div class="miner__item miner-default"></div>
-        <div class="miner__item miner-default"></div>
-        <div class="miner__item miner-default"></div>
-      </div>
-
-      <div class="wrapper">
-        <div class="miner__item miner-default"></div>
-        <div class="miner__item miner-default"></div>
-        <div class="miner__item miner-default"></div>
-        <div class="miner__item miner-default"></div>
-        <div class="miner__item miner-default"></div>
-      </div>
-
-      <div class="wrapper">
-        <div class="miner__item miner-default"></div>
-        <div class="miner__item miner-default"></div>
-        <div class="miner__item miner-default"></div>
-        <div class="miner__item miner-default"></div>
-        <div class="miner__item miner-default"></div>
-      </div>
-
-      <div class="wrapper">
-        <div class="miner__item miner-default"></div>
-        <div class="miner__item miner-default"></div>
-        <div class="miner__item miner-default"></div>
-        <div class="miner__item miner-default"></div>
-        <div class="miner__item miner-default"></div>
-      </div>
-
-      <div class="wrapper">
-        <div class="miner__item miner-default"></div>
-        <div class="miner__item miner-default"></div>
-        <div class="miner__item miner-default"></div>
-        <div class="miner__item miner-default"></div>
-        <div class="miner__item miner-default"></div>
-      </div>
+      </main>
+      <footer class="footer"></footer>
     </div>
   </body>
   <script type="module" src="index.js"></script>
